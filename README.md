@@ -1,7 +1,7 @@
 mzur_backend
 ============
 
-MZUR Backend Code
+Setup Environment
 ---
 
 Start Cassandra: 
@@ -13,7 +13,6 @@ Start Titan
 Status Titan
 `$TITAN/bin/titan.sh status`
 
---
 `pip install requirements.txt`
 
 
