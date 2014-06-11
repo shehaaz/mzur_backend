@@ -14,12 +14,16 @@ Status Titan
 `$TITAN/bin/titan.sh status`
 
 --
-Mzur Intelligence Service (MIS)
+pip install requirements.txt
+--
+mzur.core
 
 To start Flask Server
 `$ python app.py`
 
 Navigate to:
 `http://mzur.io:5000/`
+
+
 
 
