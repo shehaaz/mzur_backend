@@ -1,0 +1,6 @@
+Flask==0.10.1
+Flask-GoogleAuth==0.4.2
+cassandra-driver==2.0.0b1
+cassandra-pylib==0.0.0
+bulbs==0.3.29-20140417
+requests==1.2.3
