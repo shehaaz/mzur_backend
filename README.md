@@ -14,10 +14,12 @@ Status Titan
 `$TITAN/bin/titan.sh status`
 
 --
-pip install requirements.txt
+`pip install requirements.txt`
+
+
 --
 mzur.core
-
+--
 To start Flask Server
 `$ python app.py`
 
