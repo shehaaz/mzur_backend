@@ -5,21 +5,21 @@ MZUR Backend Code
 ---
 
 Start Cassandra: 
-$ cassandra -f
+`$ cassandra -f`
 
 Start Titan
-$TITAN/bin/titan.sh start
+`$TITAN/bin/titan.sh start`
 
 Status Titan
-$TITAN/bin/titan.sh status
+`$TITAN/bin/titan.sh status`
 
 --
 Mzur Intelligence Service (MIS)
 
 To start Flask Server
-$ python app.py 
+`$ python app.py`
 
 Navigate to:
-http://mzur.io:5000/
+`http://mzur.io:5000/`
 
 
