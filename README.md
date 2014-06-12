@@ -34,8 +34,8 @@ This is where the graph database resides. It's written in Python and uses the Ti
 
 #TODO
 
-*Implement GraphDB
-*Write the documentation on using it
-*Create Tests for DB
-*Set up Travis CI
+* Implement GraphDB
+* Write the documentation on using it
+* Create Tests for DB
+* Set up Travis CI
 
