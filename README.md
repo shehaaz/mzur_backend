@@ -1,4 +1,4 @@
-mzur_backend
+#The MZUR Backend Service
 ============
 
 Setup Environment
@@ -26,5 +26,16 @@ Navigate to:
 `http://mzur.io:5000/`
 
 
+--
+mzur.graph
+--
 
+This is where the graph database resides. It's written in Python and uses the Tinkerpop Stack and Titan Graph DB
+
+#TODO
+
+Implement GraphDB
+Write the documentation on using it
+Create Tests for DB
+Set up Travis CI
 
