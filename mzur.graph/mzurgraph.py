@@ -1,12 +1,31 @@
-from mzurgraph import User, Choses, Sport
-from bulbs.titan import Graph
+import os
+import jpype
 import requests
 import json
+from mzur_engine import CreateUser
+from flask import Flask, g
 
-g = Graph()
-g.add_proxy("user", User)
-g.add_proxy("choses", Choses)
-g.add_proxy("sport", Sport)
 
-james = g.user.create(name="James")
-julie = g.user.create(name="Julie")
+# configuration
+DATABASE = 'graphdatabase'
+DEBUG = True
+SECRET_KEY = 'boo'
+USERNAME = 'mzur'
+PASSWORD = 'bla'
+ADMIN = 'admin'
+
+app = Flask(__name__)
+app.config.from_object(__name__)
+
+@app.route('/user/<name>')
+def user(name):
+	user = CreateUser(name=name.toString())
+
+@app.route('/choses/<sport>')
+def choses(sport):
+    return 'User chose, {0}!'.format(sport)
+
+@app.route('/has/<budget>')
+def has(budget):
+	return 'User has budget, {0}!'.format(budget)
+

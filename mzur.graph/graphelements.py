@@ -10,6 +10,9 @@ class User(Node):
     name = String(nullable=False)
     age = Integer()
     gender = String(nullable=False)
+    email = String(nullable=False)
+    sportChosen = List()
+    isAvailable = List()
 
 class Sport(Node):
 	element_type = "sport"
@@ -22,32 +25,24 @@ class Budget(Node):
 
 	price_level = Integer()
 
-class Season(Node):
-	element_type = "season"
+class Location(Node):
+	element_type = "budget"
 
-	season = Integer()
+	location = Double()
 
-class TrendingAcitivity(Node):
-	element_type = "trendingActivity"
 
-	name = String(nullable=False)
 
-class Feedback(Node):
-	element_type = "feedback"
+class Assigns(Node):
+	element_type = "assigns"
 
-	response = String(nullable=False)
+	created = DateTime(default=current_datetime, nullable=False)
 
 class Choses(Relationship):
 	label = "choses"
 
 	created = DateTime(default=current_datetime, nullable=False)
 
-class HasValue(Relationship):
-	label = "hasValue"
-
-	created = DateTime(default=current_datetime, nullable=False)
-
-class HasName(Relationship):
-	label = "hasName"
+class Has(Relationship):
+	label = "has"
 
 	created = DateTime(default=current_datetime, nullable=False)
