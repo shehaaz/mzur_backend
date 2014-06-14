@@ -33,6 +33,10 @@ def CreateSport(p_name, p_experience_level, p_fitness_level):
 def ChoseSport(self,p_email,p_sport):
 	#Look up the user
 	person = g.user.index.lookup(email=p_email)
+	vertices = list(person)
+	vertex = vertices[0]
+	
+	json.loads(vertex)
 	#Look up the sport they chose
 	sportSelected = g.sport.index.lookup(name=p_sport)
 	#Add that sport to the list of all chosen sports
