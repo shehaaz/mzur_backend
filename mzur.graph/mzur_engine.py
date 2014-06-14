@@ -12,18 +12,19 @@ g.add_proxy("sport", Sport)
 g.add_proxy("location", Location)
 g.add_proxy("budget", Budget)
 
-def CreateUser(self, p_name, p_age, p_gender, p_email, p_sportChosen):
+def CreateUser(self, p_name, p_age, p_gender, p_email, p_sportList):
 	person = g.user.create(email=p_email)
 	person.name = p_name
 	person.age = p_age 
 	person.gender = p_gender
-	person.sportChosen = p_sportChosen
+	person.sportChosen = p_sportList
 	person.save()
 	
-def ChoseSport(self,p_email,p_sportChosen):
-	userID = g.user.index.lookup(email=p_email)
-	sports = g.user.index.lookup(sportChosen=p_sportChosen)
-	g.choses.create(userID,sports)	
+def ChoseSport(self,p_email,p_sportList):
+	person = g.user.index.lookup(email=p_email)
+	person.sportChosen.append(p_sportList)
+	g.user.update(1, person.sportList)
+	g.choses.create(person,)	
 
  
 def AssignRoutine(self, email, sportChosen):
