@@ -1,6 +1,6 @@
 #mzurgraph.py
 from bulbs.model import Node, Relationship
-from bulbs.property import String, Integer, List, DateTime
+from bulbs.property import String, Integer, List, Double, DateTime
 from bulbs.utils import current_datetime
 
 class User(Node):
