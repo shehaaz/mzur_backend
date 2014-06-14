@@ -16,12 +16,12 @@ def CreateUser(self,name, age, gender, email,sportChosen):
 	self.gender = gender
 	self.email = email
 	self.sportChosen = sportChosen
-	user = g.user.create(name=self.name)
+	user = g.user.create(email=self.email)
 	sport = g.user.create(sportChosen = self.sportChosen)
 
-def ChoseSport(self,name,sportChosen):
-	self.name = name
-	nodes = g.user.index.lookup(name=self.name)
+def ChoseSport(self,email,sportChosen):
+	self.email = email
+	nodes = g.user.index.lookup(name=self.email)
 	sports = g.user.index.lookup(name=self.sportChosen)
 	vertices = list(nodes)
 	vertex = vertices[0]
