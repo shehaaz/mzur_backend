@@ -27,11 +27,12 @@ def CreateSport(p_name, p_experience_level, p_fitness_level):
 		newSport.fitness_level = p_fitness_level
 		newSport.save()
 	
-def ChoseSport(self,p_email,p_sportList):
+def ChoseSport(self,p_email,p_sport):
 	person = g.user.index.lookup(email=p_email)
-	person.sportChosen.append(p_sportList)
-	g.user.update(1, person.sportList)
-	g.choses.create(person,)	
+	sportSelected = g.sport.index.lookup(name=p_sport)
+	person.sportChosen.append(p_sport)
+	g.user.update(person, person.sport)
+	g.choses.create(person,sportSelected)	
 
  
 def AssignRoutine(self, email, sportChosen):
