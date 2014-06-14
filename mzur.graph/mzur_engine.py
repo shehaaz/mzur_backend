@@ -37,6 +37,9 @@ def ChoseSport(self,p_email,p_sport):
 	vertex = vertices[0]
 	# Append sport chosen to sport list
 	sportList = vertex.data()['sportChosen'].append(p_sport.decode('utf-8'))
+	
+	#TODO
+	# Update the person with the new sport they chose and save
 	#Create an edge between person and the sport they chose
 		
 
