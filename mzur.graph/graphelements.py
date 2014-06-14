@@ -16,7 +16,8 @@ class User(Node):
 
 class Sport(Node):
 	element_type = "sport"
-
+	
+	name = String(nullable=False)
 	experience_level = Integer()
 	fitness_level = Integer()
 
