@@ -1,5 +1,4 @@
 from graphelements import User, Choses, Sport, Location
-from mzurgraph import
 from bulbs.titan import Graph
 import requests
 import json
