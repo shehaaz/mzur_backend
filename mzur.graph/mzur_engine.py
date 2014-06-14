@@ -35,16 +35,10 @@ def ChoseSport(self,p_email,p_sport):
 	person = g.user.index.lookup(email=p_email)
 	vertices = list(person)
 	vertex = vertices[0]
-	
-	json.loads(vertex)
-	#Look up the sport they chose
-	sportSelected = g.sport.index.lookup(name=p_sport)
-	#Add that sport to the list of all chosen sports
-	person.sportChosen.append(p_sport)
-	#Update the user node with the new sport list
-	g.user.update(person, person.sport)
+	# Append sport chosen to sport list
+	sportList = vertex.data()['sportChosen'].append(p_sport.decode('utf-8'))
 	#Create an edge between person and the sport they chose
-	g.choses.create(person,sportSelected)	
+		
 
  
 def AssignRoutine(p_email, p_sportList):
