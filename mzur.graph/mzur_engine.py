@@ -13,9 +13,13 @@ g.add_proxy("location", Location)
 g.add_proxy("budget", Budget)
 
 def CreateUser(self,name, age, gender, email, sportChosen):
-	user = g.user.create(user.name=name, user.age=age, 
-	user.gender=gender,user.email=email, user.sportChosen = sportChosen)
-
+	user = g.user.create()
+	user.name=name, user.age=age, 
+	user.gender=gender
+	user.email=email
+	user.sportChosen = sportChosen
+	user.save()
+	
 def ChoseSport(self,email,sportChosen):
 	self.email = email
 	self.sportChosen = sportChosen
