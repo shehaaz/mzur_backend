@@ -14,10 +14,9 @@ g.add_proxy("budget", Budget)
 
 def CreateUser(self, p_name, p_age, p_gender, p_email, p_sportChosen):
 	person = g.user.create(email=p_email)
-	person.name=p_name
-	person.age=p_age 
-	person.gender=p_gender
-	person.email=p_email
+	person.name = p_name
+	person.age = p_age 
+	person.gender = p_gender
 	person.sportChosen = p_sportChosen
 	person.save()
 	
