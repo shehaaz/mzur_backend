@@ -27,3 +27,4 @@ def ChoseSport(self,name,sportChosen):
 	vertex = vertices[0]
 	choses = vertex.bothV("choses")
 	for k in choses: print k.data()
+ 
