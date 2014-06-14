@@ -1,6 +1,6 @@
 #mzurgraph.py
 from bulbs.model import Node, Relationship
-from bulbs.property import String, Integer, List, Double, DateTime
+from bulbs.property import String, Integer, List, DateTime
 from bulbs.utils import current_datetime
 
 class User(Node):
@@ -26,9 +26,9 @@ class Budget(Node):
 	price_level = Integer()
 
 class Location(Node):
-	element_type = "budget"
+	element_type = "location"
 
-	location = Double()
+	location = String(nullable=False)
 
 
 
