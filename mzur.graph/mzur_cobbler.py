@@ -1,31 +1,43 @@
-import os
-import jpype
-import requests
-import json
-from mzur_engine import CreateUser
-from flask import Flask, g
+from mzur_engine import GetOrCreateUser, GetOrCreateSport, ChooseSport, SetBudget, SetLocation, GetChosenSports
+from flask import Flask, request
 
-
-# configuration
-DATABASE = 'graphdatabase'
-DEBUG = True
-SECRET_KEY = 'boo'
-USERNAME = 'mzur'
-PASSWORD = 'bla'
-ADMIN = 'admin'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-@app.route('/user/<name>')
-def user(name):
-	user = CreateUser(name=name.toString())
+#http://mzur.io:5001/create_user?email=ari@mzur.io&name=ari&age=23&gender=M&sport=spartan
+@app.route('/create_user')
+def create_user():
+	email = request.args.get('email')
+	name = request.args.get('name')
+	age = request.args.get('age')
+	gender = request.args.get('gender')
+	sport = request.args.get('sport')
+	person = GetOrCreateUser(name, age, gender, email, sport)
+	return "Created user %s!" %str(person.email)
 
-@app.route('/choses/<sport>')
-def choses(sport):
-    return 'User chose, {0}!'.format(sport)
+@app.route('/choose_sport/<sport>/<email>')
+def choose_sport(sport, email):
+	expe = request.args.get('email')
+	name = request.args.get('name')
+	sport = GetOrCreateSport(sport)
+	ChooseSport(email, sport.name)
+	return email + " chooses " + str(sport.name)
 
-@app.route('/has/<budget>')
-def has(budget):
-	return 'User has budget, {0}!'.format(budget)
+@app.route('/get_sports/<email>')
+def get_sports(email):
+	return GetChosenSports(email)
 
+@app.route('/set_budget/<budget>/<email>')
+def set_budget(budget, email):
+	return SetBudget(email, budget)
+
+@app.route('/set_location/<location>/<email>')
+def set_location(location, email):
+	SetLocation(email, location)
+	return email + " lives In " + location
+
+
+if __name__ == '__main__':
+    app.debug = True	
+    app.run(host='67.207.152.182', port=5001)

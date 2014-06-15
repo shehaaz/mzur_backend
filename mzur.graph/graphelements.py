@@ -7,9 +7,9 @@ class User(Node):
 	
 	element_type = "user"
 
-	name = String(nullable=False)
+	name = String(nullable=True)
 	age = Integer()
-	gender = String(nullable=False)
+	gender = String(nullable=True)
 	email = String(nullable=False)
 	sportChosen = List()
 	isAvailable = List()
@@ -18,8 +18,6 @@ class Sport(Node):
 	element_type = "sport"
 	
 	name = String(nullable=False)
-	experience_level = Integer()
-	fitness_level = Integer()
 
 class Budget(Node):
 	element_type = "budget"
@@ -38,12 +36,21 @@ class Assigns(Node):
 
 	created = DateTime(default=current_datetime, nullable=False)
 
-class Choses(Relationship):
-	label = "choses"
+class Chooses(Relationship):
+	label = "chooses"
 
 	created = DateTime(default=current_datetime, nullable=False)
+	#TODO: add properties to chooses
+	# experience_level = Integer()
+	# fitness_level = Integer()
+	# budget = personal budget
 
 class Has(Relationship):
 	label = "has"
+
+	created = DateTime(default=current_datetime, nullable=False)
+
+class LivesIn(Relationship):
+	label = "lives_in"
 
 	created = DateTime(default=current_datetime, nullable=False)
