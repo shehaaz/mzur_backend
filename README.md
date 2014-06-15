@@ -34,7 +34,7 @@ This is where the graph database resides. It's written in Python and uses the Ti
 
 #TODO
 
-* Implement GraphDB
+* Fix bugs in mzur_engine
 * Write the documentation on using it
 * Create Tests for DB
 * Set up Travis CI
