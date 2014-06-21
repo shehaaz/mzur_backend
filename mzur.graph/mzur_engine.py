@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jun 20 15:00:48 2014
+
+@author: turbosnail9
+"""
+
+#
+# Imports
+#
 from graphelements import User, Chooses, Sport, Location, Budget, Has, LivesIn
 from bulbs.titan import Graph
 import requests
