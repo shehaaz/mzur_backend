@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jun 20 15:00:48 2014
+
+@author: turbosnail9
+"""
+
+#
+# Imports
+#
 from mzur_engine import GetOrCreateUser, GetOrCreateSport, ChooseSport, SetBudget, SetLocation, GetChosenSports
 from flask import Flask, request
 
