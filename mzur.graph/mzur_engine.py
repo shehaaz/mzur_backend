@@ -23,8 +23,11 @@ g.add_proxy("location", Location)
 g.add_proxy("lives_in", LivesIn)
 g.add_proxy("budget", Budget)
 
+#
+# Method definitions
+#
 def GetOrCreateUser(p_name, p_age, p_gender, p_email, p_sportList):
-	# Create a new person node and pass in the properties
+	#Create a new person node and pass in the properties
 	person = g.user.get_or_create('email',p_email,{'email':p_email})
 	person.name = p_name
 	person.age = p_age 
