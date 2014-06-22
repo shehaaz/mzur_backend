@@ -1,5 +1,5 @@
 ---
-Setup Environment
+Quickstart
 ---
 
 Start Cassandra: 
