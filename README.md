@@ -27,7 +27,7 @@ Navigate to:
 
 
 --
--mzur.graph](https://github.com/shehaaz/mzur_backend/tree/master/mzur.graph)
+[mzur.graph](https://github.com/shehaaz/mzur_backend/tree/master/mzur.graph)
 --
 
 This is where the graph database resides. It's written in Python and uses the Tinkerpop Stack and Titan Graph DB. 
