@@ -1,6 +1,3 @@
-The MZUR Backend Service
-
-
 ---
 Setup Environment
 ---
