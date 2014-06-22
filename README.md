@@ -30,7 +30,7 @@ Navigate to:
 mzur.graph
 --
 
-This is where the graph database resides. It's written in Python and uses the Tinkerpop Stack and Titan Graph DB
+This is where the graph database resides. It's written in Python and uses the Tinkerpop Stack and Titan Graph DB. Any new features can be added [here](https://github.com/user/repo/blob/branch/other_file.md)
 
 #TODO
 
