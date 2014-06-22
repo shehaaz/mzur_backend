@@ -15,7 +15,9 @@ from flask import Flask, request
 app = Flask(__name__)
 app.config.from_object(__name__)
 
-#http://mzur.io:5001/create_user?email=ari@mzur.io&name=ari&age=23&gender=M&sport=spartan
+#
+# Endpoint Methods
+#
 @app.route('/create_user')
 def create_user():
 	email = request.args.get('email')
